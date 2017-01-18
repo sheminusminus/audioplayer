@@ -297,20 +297,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
 		let m4aPaths = Bundle.main.paths(forResourcesOfType: ".m4a", inDirectory: "")
-		let mp3Paths = Bundle.main.paths(forResourcesOfType: ".mp3", inDirectory: "")
-		var allPaths: [String] = m4aPaths
+		var allPaths = Bundle.main.paths(forResourcesOfType: ".mp3", inDirectory: "")
+		
+		allPaths.append(contentsOf: m4aPaths);
         
-        
-        
-        // LOOP
-        // WHY ARE THERE 2 PATHS???
-		for path in mp3Paths {
-			allPaths.append(path)
-		}
-        
-        
-        
-        
+		
         // LOOP
         // WHY IS THERE PATH HERE TO?????
         // YOU CAN HAVE A LOOP WITH ALL LETS/VARS???? OR IS THIS FOR OUR OWN SAKE TO MAKE SURE ITS WORKING?? CUS OF THE print()
