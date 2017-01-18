@@ -23,14 +23,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // used in the viewDidLoad
 	@IBOutlet weak var tableView: UITableView!
     
-    
-    
+
+	
     
     // THIS VAR WILL NOW WALK AROUND BEING THE TYOE AVAUDIPLAYER
     // why cant we say var player = avauidoplayer!
     var player: AVAudioPlayer!
-    
-    
+	
     
     
 	
@@ -73,9 +72,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
         // these constants are gonna walk around this sheet and represent the song objects that include the Title,Type,Artist etc.............
-		let arcadeFire = Song(initTitle: "We Used to Wait", initArtist: "Arcade Fire", initType: "Rock", initFile: "ArcadeFire-WeUsedToWait.m4a")
-		let brandNew = Song(initTitle: "Nobody Moves", initArtist: "Brand New", initType: "Rock", initFile: "BrandNew-NobodyMoves.mp3")
-		let coconutRecords = Song(initTitle: "West Coast", initArtist: "Coconut Records", initType: "Pop Rock", initFile: "CoconutRecords-WestCoast.m4a")
+		let arcadeFire = Song(initTitle: "We Used to Wait", initArtist: "Arcade Fire", initType: "Rock", initFile: URL(fileURLWithPath: "ArcadeFire-WeUsedToWait.m4a"))
+		let brandNew = Song(initTitle: "Nobody Moves", initArtist: "Brand New", initType: "Rock", initFile: URL(fileURLWithPath: "BrandNew-NobodyMoves.mp3"))
+		let coconutRecords = Song(initTitle: "West Coast", initArtist: "Coconut Records", initType: "Pop Rock", initFile: URL(fileURLWithPath: "CoconutRecords-WestCoast.m4a"))
         
         
         
@@ -151,35 +150,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let selectedSection = sectionHeaders[indexPath.section]
         let selectedSong = library[selectedSection]?[indexPath.row]
-        let songName = selectedSong!.fileName!
-        let fullPath = URL(fileURLWithPath: "\(Bundle.main.resourcePath!)/\(songName)")
-        
-        // TO HAVE PlayScreen pop up
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let PlayScreen = storyboard.instantiateViewController(withIdentifier: "PlayScreen") as! PlayerViewController
-        
-        print(fullPath)
-        
-        // FORGOT WHAT DO DOES
-        do{
-            
-            player = try! AVAudioPlayer(contentsOf: fullPath)
-            player.delegate = self
-            player.play()
-            
-            // will present the PlayScreen
-            self.present(PlayScreen, animated: true, completion: nil)
-            
-        }
-        catch{
-            print("error")
-            
-        }
-    }
-    
-    
-    
-    
+		
+		
+		popupPlayer(song: selectedSong!)
+		
+
+	}
+	
     
     
     
@@ -317,6 +294,29 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 			let artistComponent = remainingComponents[remainingComponents.count - 1]
 			print(artistComponent)
 		}
+	}
+	
+	
+	
+	
+	func popupPlayer(song: Song) {
+		// TO HAVE PlayScreen pop up
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let playScreen = storyboard.instantiateViewController(withIdentifier: "PlayScreen") as! PlayerViewController
+		
+		
+		playScreen.filePath = song.fileName
+		playScreen.songTitle = song.title
+		playScreen.songArtist = song.artist
+		
+		
+		// will present the PlayScreen
+		self.present(playScreen, animated: true, completion: {
+		
+			playScreen.playMusic()
+			
+		})
+
 	}
 	
 	

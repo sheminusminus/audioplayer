@@ -14,11 +14,11 @@ class Song {
 	var title: String!
 	var artist: String!
 	var mediaType: String!
-	var fileName: String!
+	var fileName: URL!
 	var genre: String!
 	
     // right here we are activating them making them real .... so everytime we object song appers this all will come with
-	init(initTitle: String, initArtist: String, initType: String, initFile: String, initGenre: String! = "") {
+	init(initTitle: String, initArtist: String, initType: String, initFile: URL, initGenre: String! = "") {
         
         //Damn self
 		self.title = initTitle

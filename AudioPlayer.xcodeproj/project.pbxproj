@@ -29,6 +29,7 @@
 		4C0E83891E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */; };
 		4C0E838B1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */; };
 		4C0E838D1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */; };
+		4C597F601E300A1C0014AF96 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C597F5F1E300A1C0014AF96 /* AudioManager.swift */; };
 		4C70D3931E0482B000683F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3921E0482B000683F4F /* AppDelegate.swift */; };
 		4C70D3951E0482B000683F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3941E0482B000683F4F /* ViewController.swift */; };
 		4C70D3981E0482B000683F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C70D3961E0482B000683F4F /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 		4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VitaminStringQuartet-HeySoulSister.m4a"; sourceTree = "<group>"; };
 		4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalkTheMoon-AnnaSun.m4a"; sourceTree = "<group>"; };
 		4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YeahYeahYeahs-Phenomena.m4a"; sourceTree = "<group>"; };
+		4C597F5F1E300A1C0014AF96 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		4C70D38F1E0482B000683F4F /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C70D3921E0482B000683F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C70D3941E0482B000683F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 			name = Music;
 			sourceTree = "<group>";
 		};
+		4C597F5E1E3009F10014AF96 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4C597F5F1E300A1C0014AF96 /* AudioManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		4C70D3861E0482B000683F4F = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +195,7 @@
 		4C70D3911E0482B000683F4F /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C597F5E1E3009F10014AF96 /* Managers */,
 				4C0E83651E283B780082DFD3 /* Music */,
 				4C70D3D11E048E8600683F4F /* Views */,
 				4C70D3CC1E048DF500683F4F /* Objects */,
@@ -411,6 +422,7 @@
 				4C70D3D01E048E2A00683F4F /* ActivityItem.swift in Sources */,
 				4C70D3951E0482B000683F4F /* ViewController.swift in Sources */,
 				4C70D3CA1E048DD200683F4F /* ActivityViewController.swift in Sources */,
+				4C597F601E300A1C0014AF96 /* AudioManager.swift in Sources */,
 				4C70D3C81E048DC800683F4F /* LibraryViewController.swift in Sources */,
 				4C70D39B1E0482B000683F4F /* AudioPlayer.xcdatamodeld in Sources */,
 				4C70D3C61E048D9D00683F4F /* SearchViewController.swift in Sources */,
