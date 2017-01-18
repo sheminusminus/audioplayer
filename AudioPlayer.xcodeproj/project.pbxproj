@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02565CF51E28476E004F10A5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02565CF41E28476E004F10A5 /* PlayerViewController.swift */; };
+		4C0E83641E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */; };
+		4C0E83671E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83661E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 */; };
+		4C0E83691E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83681E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a */; };
+		4C0E836B1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E836A1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a */; };
+		4C0E836D1E283C130082DFD3 /* EmpireOfTheSun-WalkingOnADream.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E836C1E283C130082DFD3 /* EmpireOfTheSun-WalkingOnADream.m4a */; };
+		4C0E836F1E283C1D0082DFD3 /* FleetFoxes-BatteryKinzie.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E836E1E283C1D0082DFD3 /* FleetFoxes-BatteryKinzie.m4a */; };
+		4C0E83711E283C260082DFD3 /* GeorgeBarnett-AnimalKeeper.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83701E283C260082DFD3 /* GeorgeBarnett-AnimalKeeper.m4a */; };
+		4C0E83731E283C2F0082DFD3 /* HuskyRescue-NewLightOfTomorrow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83721E283C2F0082DFD3 /* HuskyRescue-NewLightOfTomorrow.m4a */; };
+		4C0E83751E283C370082DFD3 /* ImagineDragons-Radioactive.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83741E283C370082DFD3 /* ImagineDragons-Radioactive.m4a */; };
+		4C0E83771E283C430082DFD3 /* JeffersonAirplane-WhiteRabbit.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83761E283C430082DFD3 /* JeffersonAirplane-WhiteRabbit.m4a */; };
+		4C0E83791E283C4F0082DFD3 /* LedZeppelin-DazedAndConfused.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83781E283C4F0082DFD3 /* LedZeppelin-DazedAndConfused.m4a */; };
+		4C0E837B1E283C560082DFD3 /* M83-MidnightCity.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E837A1E283C560082DFD3 /* M83-MidnightCity.m4a */; };
+		4C0E837D1E283C640082DFD3 /* NineInchNails-Ruiner.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E837C1E283C640082DFD3 /* NineInchNails-Ruiner.m4a */; };
+		4C0E837F1E283C6D0082DFD3 /* OfMonstersAndMen-LittleTalks.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E837E1E283C6D0082DFD3 /* OfMonstersAndMen-LittleTalks.m4a */; };
+		4C0E83811E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83801E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a */; };
+		4C0E83831E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83821E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a */; };
+		4C0E83851E283C920082DFD3 /* SnowPatrol-ThisIsntEverythingYouAre.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83841E283C920082DFD3 /* SnowPatrol-ThisIsntEverythingYouAre.m4a */; };
+		4C0E83871E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83861E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a */; };
+		4C0E83891E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */; };
+		4C0E838B1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */; };
+		4C0E838D1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */; };
 		4C70D3931E0482B000683F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3921E0482B000683F4F /* AppDelegate.swift */; };
 		4C70D3951E0482B000683F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3941E0482B000683F4F /* ViewController.swift */; };
 		4C70D3981E0482B000683F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C70D3961E0482B000683F4F /* Main.storyboard */; };
@@ -15,6 +37,13 @@
 		4C70D3A01E0482B000683F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C70D39E1E0482B000683F4F /* LaunchScreen.storyboard */; };
 		4C70D3AB1E0482B100683F4F /* AudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3AA1E0482B100683F4F /* AudioPlayerTests.swift */; };
 		4C70D3B61E0482B100683F4F /* AudioPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3B51E0482B100683F4F /* AudioPlayerUITests.swift */; };
+		4C70D3C61E048D9D00683F4F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3C51E048D9D00683F4F /* SearchViewController.swift */; };
+		4C70D3C81E048DC800683F4F /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3C71E048DC800683F4F /* LibraryViewController.swift */; };
+		4C70D3CA1E048DD200683F4F /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3C91E048DD200683F4F /* ActivityViewController.swift */; };
+		4C70D3CE1E048E0900683F4F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3CD1E048E0900683F4F /* Song.swift */; };
+		4C70D3D01E048E2A00683F4F /* ActivityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3CF1E048E2A00683F4F /* ActivityItem.swift */; };
+		4C70D3D31E048EA500683F4F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3D21E048EA500683F4F /* SearchBarView.swift */; };
+		4C70D3D51E04963700683F4F /* ActivityItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3D41E04963700683F4F /* ActivityItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +64,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02565CF41E28476E004F10A5 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArcadeFire-WeUsedToWait.m4a"; sourceTree = "<group>"; };
+		4C0E83661E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "BrandNew-NobodyMoves.mp3"; sourceTree = "<group>"; };
+		4C0E83681E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DeathCabForCutie-TitleAndRegistration.m4a"; sourceTree = "<group>"; };
+		4C0E836A1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoconutRecords-WestCoast.m4a"; sourceTree = "<group>"; };
+		4C0E836C1E283C130082DFD3 /* EmpireOfTheSun-WalkingOnADream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EmpireOfTheSun-WalkingOnADream.m4a"; sourceTree = "<group>"; };
+		4C0E836E1E283C1D0082DFD3 /* FleetFoxes-BatteryKinzie.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FleetFoxes-BatteryKinzie.m4a"; sourceTree = "<group>"; };
+		4C0E83701E283C260082DFD3 /* GeorgeBarnett-AnimalKeeper.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeorgeBarnett-AnimalKeeper.m4a"; sourceTree = "<group>"; };
+		4C0E83721E283C2F0082DFD3 /* HuskyRescue-NewLightOfTomorrow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HuskyRescue-NewLightOfTomorrow.m4a"; sourceTree = "<group>"; };
+		4C0E83741E283C370082DFD3 /* ImagineDragons-Radioactive.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ImagineDragons-Radioactive.m4a"; sourceTree = "<group>"; };
+		4C0E83761E283C430082DFD3 /* JeffersonAirplane-WhiteRabbit.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeffersonAirplane-WhiteRabbit.m4a"; sourceTree = "<group>"; };
+		4C0E83781E283C4F0082DFD3 /* LedZeppelin-DazedAndConfused.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LedZeppelin-DazedAndConfused.m4a"; sourceTree = "<group>"; };
+		4C0E837A1E283C560082DFD3 /* M83-MidnightCity.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "M83-MidnightCity.m4a"; sourceTree = "<group>"; };
+		4C0E837C1E283C640082DFD3 /* NineInchNails-Ruiner.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NineInchNails-Ruiner.m4a"; sourceTree = "<group>"; };
+		4C0E837E1E283C6D0082DFD3 /* OfMonstersAndMen-LittleTalks.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OfMonstersAndMen-LittleTalks.m4a"; sourceTree = "<group>"; };
+		4C0E83801E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pendulum-PropaneNightmares.m4a"; sourceTree = "<group>"; };
+		4C0E83821E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RyanLevine-ThroughTheTrees.m4a"; sourceTree = "<group>"; };
+		4C0E83841E283C920082DFD3 /* SnowPatrol-ThisIsntEverythingYouAre.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SnowPatrol-ThisIsntEverythingYouAre.m4a"; sourceTree = "<group>"; };
+		4C0E83861E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TakingBackSunday-YouAreSoLastSummer.m4a"; sourceTree = "<group>"; };
+		4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VitaminStringQuartet-HeySoulSister.m4a"; sourceTree = "<group>"; };
+		4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalkTheMoon-AnnaSun.m4a"; sourceTree = "<group>"; };
+		4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YeahYeahYeahs-Phenomena.m4a"; sourceTree = "<group>"; };
 		4C70D38F1E0482B000683F4F /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C70D3921E0482B000683F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C70D3941E0482B000683F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +100,13 @@
 		4C70D3B11E0482B100683F4F /* AudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C70D3B51E0482B100683F4F /* AudioPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUITests.swift; sourceTree = "<group>"; };
 		4C70D3B71E0482B100683F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C70D3C51E048D9D00683F4F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4C70D3C71E048DC800683F4F /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		4C70D3C91E048DD200683F4F /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4C70D3CD1E048E0900683F4F /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		4C70D3CF1E048E2A00683F4F /* ActivityItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityItem.swift; sourceTree = "<group>"; };
+		4C70D3D21E048EA500683F4F /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		4C70D3D41E04963700683F4F /* ActivityItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +134,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0E83651E283B780082DFD3 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */,
+				4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */,
+				4C0E83801E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a */,
+				4C0E83861E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a */,
+				4C0E83821E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a */,
+				4C0E837C1E283C640082DFD3 /* NineInchNails-Ruiner.m4a */,
+				4C0E83841E283C920082DFD3 /* SnowPatrol-ThisIsntEverythingYouAre.m4a */,
+				4C0E837E1E283C6D0082DFD3 /* OfMonstersAndMen-LittleTalks.m4a */,
+				4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */,
+				4C0E837A1E283C560082DFD3 /* M83-MidnightCity.m4a */,
+				4C0E83781E283C4F0082DFD3 /* LedZeppelin-DazedAndConfused.m4a */,
+				4C0E83741E283C370082DFD3 /* ImagineDragons-Radioactive.m4a */,
+				4C0E83701E283C260082DFD3 /* GeorgeBarnett-AnimalKeeper.m4a */,
+				4C0E83761E283C430082DFD3 /* JeffersonAirplane-WhiteRabbit.m4a */,
+				4C0E83721E283C2F0082DFD3 /* HuskyRescue-NewLightOfTomorrow.m4a */,
+				4C0E836E1E283C1D0082DFD3 /* FleetFoxes-BatteryKinzie.m4a */,
+				4C0E836C1E283C130082DFD3 /* EmpireOfTheSun-WalkingOnADream.m4a */,
+				4C0E836A1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a */,
+				4C0E83681E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a */,
+				4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */,
+				4C0E83661E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		4C70D3861E0482B000683F4F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +185,10 @@
 		4C70D3911E0482B000683F4F /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C0E83651E283B780082DFD3 /* Music */,
+				4C70D3D11E048E8600683F4F /* Views */,
+				4C70D3CC1E048DF500683F4F /* Objects */,
+				4C70D3CB1E048DD900683F4F /* ViewControllers */,
 				4C70D3921E0482B000683F4F /* AppDelegate.swift */,
 				4C70D3941E0482B000683F4F /* ViewController.swift */,
 				4C70D3961E0482B000683F4F /* Main.storyboard */,
@@ -126,6 +216,35 @@
 				4C70D3B71E0482B100683F4F /* Info.plist */,
 			);
 			path = AudioPlayerUITests;
+			sourceTree = "<group>";
+		};
+		4C70D3CB1E048DD900683F4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C70D3C51E048D9D00683F4F /* SearchViewController.swift */,
+				4C70D3C71E048DC800683F4F /* LibraryViewController.swift */,
+				4C70D3C91E048DD200683F4F /* ActivityViewController.swift */,
+				02565CF41E28476E004F10A5 /* PlayerViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C70D3CC1E048DF500683F4F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4C70D3CD1E048E0900683F4F /* Song.swift */,
+				4C70D3CF1E048E2A00683F4F /* ActivityItem.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		4C70D3D11E048E8600683F4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C70D3D21E048EA500683F4F /* SearchBarView.swift */,
+				4C70D3D41E04963700683F4F /* ActivityItemView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +315,7 @@
 				TargetAttributes = {
 					4C70D38E1E0482B000683F4F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = B9452FEMTF;
+						DevelopmentTeam = 8GE53Y8KX2;
 						ProvisioningStyle = Automatic;
 					};
 					4C70D3A51E0482B100683F4F = {
@@ -238,9 +357,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0E83771E283C430082DFD3 /* JeffersonAirplane-WhiteRabbit.m4a in Resources */,
+				4C0E837F1E283C6D0082DFD3 /* OfMonstersAndMen-LittleTalks.m4a in Resources */,
+				4C0E83831E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a in Resources */,
+				4C0E83851E283C920082DFD3 /* SnowPatrol-ThisIsntEverythingYouAre.m4a in Resources */,
+				4C0E83671E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 in Resources */,
+				4C0E836B1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a in Resources */,
+				4C0E838B1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a in Resources */,
+				4C0E838D1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a in Resources */,
+				4C0E83751E283C370082DFD3 /* ImagineDragons-Radioactive.m4a in Resources */,
+				4C0E83891E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a in Resources */,
+				4C0E836F1E283C1D0082DFD3 /* FleetFoxes-BatteryKinzie.m4a in Resources */,
+				4C0E837B1E283C560082DFD3 /* M83-MidnightCity.m4a in Resources */,
 				4C70D3A01E0482B000683F4F /* LaunchScreen.storyboard in Resources */,
+				4C0E83691E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a in Resources */,
+				4C0E837D1E283C640082DFD3 /* NineInchNails-Ruiner.m4a in Resources */,
+				4C0E83731E283C2F0082DFD3 /* HuskyRescue-NewLightOfTomorrow.m4a in Resources */,
+				4C0E83711E283C260082DFD3 /* GeorgeBarnett-AnimalKeeper.m4a in Resources */,
 				4C70D39D1E0482B000683F4F /* Assets.xcassets in Resources */,
+				4C0E83811E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a in Resources */,
 				4C70D3981E0482B000683F4F /* Main.storyboard in Resources */,
+				4C0E83641E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a in Resources */,
+				4C0E83791E283C4F0082DFD3 /* LedZeppelin-DazedAndConfused.m4a in Resources */,
+				4C0E83871E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a in Resources */,
+				4C0E836D1E283C130082DFD3 /* EmpireOfTheSun-WalkingOnADream.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +405,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C70D3CE1E048E0900683F4F /* Song.swift in Sources */,
+				4C70D3D31E048EA500683F4F /* SearchBarView.swift in Sources */,
+				4C70D3D51E04963700683F4F /* ActivityItemView.swift in Sources */,
+				4C70D3D01E048E2A00683F4F /* ActivityItem.swift in Sources */,
 				4C70D3951E0482B000683F4F /* ViewController.swift in Sources */,
+				4C70D3CA1E048DD200683F4F /* ActivityViewController.swift in Sources */,
+				4C70D3C81E048DC800683F4F /* LibraryViewController.swift in Sources */,
 				4C70D39B1E0482B000683F4F /* AudioPlayer.xcdatamodeld in Sources */,
+				4C70D3C61E048D9D00683F4F /* SearchViewController.swift in Sources */,
+				02565CF51E28476E004F10A5 /* PlayerViewController.swift in Sources */,
 				4C70D3931E0482B000683F4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B9452FEMTF;
+				DEVELOPMENT_TEAM = 8GE53Y8KX2;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilykolar.AudioPlayer;
@@ -432,7 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B9452FEMTF;
+				DEVELOPMENT_TEAM = 8GE53Y8KX2;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilykolar.AudioPlayer;
@@ -518,6 +666,7 @@
 				4C70D3BC1E0482B100683F4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C70D3BD1E0482B100683F4F /* Build configuration list for PBXNativeTarget "AudioPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +675,7 @@
 				4C70D3BF1E0482B100683F4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C70D3C01E0482B100683F4F /* Build configuration list for PBXNativeTarget "AudioPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +684,7 @@
 				4C70D3C21E0482B100683F4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
