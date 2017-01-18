@@ -22,8 +22,11 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	// data
 	var songTitle: String = ""
 	var songArtist: String = ""
-	var filePath: URL!
+	var filePath: URL = URL(fileURLWithPath: "")
 	
+	
+	// misc player info
+	var trackTime: TimeInterval = 0
 	
 	
     // RFERENCE TO LABELS
@@ -36,7 +39,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		player = AVAudioPlayer()
 		
 		// Do any additional setup after loading the view.
 	}
@@ -46,14 +49,13 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		// Dispose of any resources that can be recreated.
 	}
 	
-	
-	
 	func playMusic() {
 		
 		do {
-			player = try? AVAudioPlayer(contentsOf: filePath)
+			player = try! AVAudioPlayer(contentsOf: filePath)
 			player.delegate = self
-			player.play()
+			player.prepareToPlay()
+			player.play(atTime: trackTime)
 		}
 		catch {
 			print("error playing song file")
@@ -63,13 +65,18 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	
 	func stopMusic() {
 		
+		if player.isPlaying {
+			trackTime = 0
+		}
 		player.stop()
-	
 	}
 	
 	func pauseMusic() {
 		
-		player.pause()
+		if player.isPlaying {
+			trackTime = player.currentTime
+			player.pause()
+		}
 		
 	}
 	
@@ -92,12 +99,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	// MARK: actions
     @IBAction func playButton(_ sender: UIButton) {
 		
-		if player.isPlaying {
-			return
-		}
-		else {
-			playMusic()
-		}
+		playMusic()
 		
     }
     
@@ -113,7 +115,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
     @IBAction func pauseButton(_ sender: UIButton) {
 		
 		pauseMusic()
-		
+
     }
     
     

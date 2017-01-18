@@ -72,12 +72,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
         // these constants are gonna walk around this sheet and represent the song objects that include the Title,Type,Artist etc.............
-		let arcadeFire = Song(initTitle: "We Used to Wait", initArtist: "Arcade Fire", initType: "Rock", initFile: URL(fileURLWithPath: "ArcadeFire-WeUsedToWait.m4a"))
-		let brandNew = Song(initTitle: "Nobody Moves", initArtist: "Brand New", initType: "Rock", initFile: URL(fileURLWithPath: "BrandNew-NobodyMoves.mp3"))
-		let coconutRecords = Song(initTitle: "West Coast", initArtist: "Coconut Records", initType: "Pop Rock", initFile: URL(fileURLWithPath: "CoconutRecords-WestCoast.m4a"))
+		let arcadeFire = Song(initTitle: "We Used to Wait", initArtist: "Arcade Fire", initType: "Rock", initFile: URL(fileReferenceLiteralResourceName: "ArcadeFire-WeUsedToWait.m4a"))
+		let brandNew = Song(initTitle: "Nobody Moves", initArtist: "Brand New", initType: "Rock", initFile: URL(fileReferenceLiteralResourceName: "BrandNew-NobodyMoves.mp3"))
+		let coconutRecords = Song(initTitle: "West Coast", initArtist: "Coconut Records", initType: "Pop Rock", initFile: URL(fileReferenceLiteralResourceName: "CoconutRecords-WestCoast.m4a"))
         
-        
-        
+		
         
         
 		// gonna loop through the sectionHeaders and Letter is just an index essentially ????? you just made it there right ??
@@ -272,51 +271,36 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // ITS ACUALLY GONNA BUILD THE THING WE SEE WHEN WE RUN OUR SIMULATOR?????????????????????
 	func buildSongLibrary() {
         
-        
-		let m4aPaths = Bundle.main.paths(forResourcesOfType: ".m4a", inDirectory: "")
-		var allPaths = Bundle.main.paths(forResourcesOfType: ".mp3", inDirectory: "")
+		// get all our song types
+		// plan for other common types here soon (.wav, maybe .flac, etc)
+		var allPaths = Bundle.main.paths(forResourcesOfType: ".m4a", inDirectory: "")
+		let mp3Paths = Bundle.main.paths(forResourcesOfType: ".mp3", inDirectory: "")
 		
-		allPaths.append(contentsOf: m4aPaths);
+		allPaths.append(contentsOf: mp3Paths);
         
 		
         // LOOP
         // WHY IS THERE PATH HERE TO?????
         // YOU CAN HAVE A LOOP WITH ALL LETS/VARS???? OR IS THIS FOR OUR OWN SAKE TO MAKE SURE ITS WORKING?? CUS OF THE print()
         //
-		for path in allPaths {
-			let pathComponents = path.characters.split(separator: "-")
-			print(pathComponents)
-            
-			let nameComponent = pathComponents.last
-			print(nameComponent)
-            
-			let remainingComponents = pathComponents[pathComponents.count - 2].split(separator: "/")
-			let artistComponent = remainingComponents[remainingComponents.count - 1]
-			print(artistComponent)
-		}
+//		for path in allPaths {
+//			let pathComponents = path.characters.split(separator: "-")
+//			print(pathComponents)
+//            
+//			let nameComponent = pathComponents.last
+//			
+//			let remainingComponents = pathComponents[pathComponents.count - 2].split(separator: "/")
+//			let artistComponent = remainingComponents[remainingComponents.count - 1]
+//			print(artistComponent)
+//		}
 	}
 	
 	
 	
 	
 	func popupPlayer(song: Song) {
-		// TO HAVE PlayScreen pop up
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let playScreen = storyboard.instantiateViewController(withIdentifier: "PlayScreen") as! PlayerViewController
-		
-		
-		playScreen.filePath = song.fileName
-		playScreen.songTitle = song.title
-		playScreen.songArtist = song.artist
-		
-		
-		// will present the PlayScreen
-		self.present(playScreen, animated: true, completion: {
-		
-			playScreen.playMusic()
-			
-		})
 
+		AudioManager.mgr.popupPlayer(senderVC: self, newSong: song)
 	}
 	
 	

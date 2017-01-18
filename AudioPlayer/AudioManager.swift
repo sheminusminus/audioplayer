@@ -11,56 +11,91 @@ import UIKit
 
 class AudioManager {
 	
+	
+	//==========================
+	// MARK: properties
+	//==========================
+	
+	
+	// creates singleton instance of this object
+	// "there can be only one"
 	static let mgr = AudioManager()
 	
-	private var currentTitle: String!
-	private var currentArtist: String!
-	private var currentFilePath: URL!
-	private var currentSong: Song?
-	private var currentSender: UIViewController?
 	
+	
+	
+	// private class variables
+	private var _title: String!
+	private var _artist: String!
+	private var _fileURL: URL!
+	private var _song: Song!
+	private var _sender: UIViewController!
+	
+	
+	
+	
+	// private init for this singleton object
 	private init() {
 		
-		currentTitle = ""
-		currentArtist = ""
-		currentFilePath = URL(fileURLWithPath: "")
-		currentSender = nil
-		currentSong = nil
+		_title = ""
+		_artist = ""
+		_fileURL = URL(fileURLWithPath: "")
+
 	}
+	
+	
+	
+	//==========================
+	// MARK: public get/set properties
+	//==========================
+	
+	//==========================
+	// referencing one of these will return the private variable value
+	// setting one of these will set the private variable value only if we allow that to happen
+	// we could put additional logic inside the setters to filter bad data first, reformat something, etc
+	//==========================
+	
+	
 	
 	var song: Song {
 		get {
-			return currentSong!
+			return _song
 		}
 		set(newValue) {
-			currentSong = newValue
+			_song = newValue
 		}
 	}
-
 	
-	var sender: UIViewController? {
+	
+	var sender: UIViewController {
 		get {
-			return currentSender!
+			return _sender
 		}
 		set(newValue) {
-			currentSender = newValue
+			_sender = newValue
 		}
 	}
+	
+	
+	
+	//==========================
+	// MARK: private methods
+	//==========================
+	
+	
 	
 	private func _popupPlayer() {
 		
-		// TO HAVE PlayScreen pop up
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let playScreen = storyboard.instantiateViewController(withIdentifier: "PlayScreen") as! PlayerViewController
 		
 		
-		playScreen.filePath = song.fileName
-		playScreen.songTitle = song.title
-		playScreen.songArtist = song.artist
+		playScreen.filePath = _song.fileName
+		playScreen.songTitle = _song.title
+		playScreen.songArtist = _song.artist
 		
 		
-		// will present the PlayScreen
-		sender!.present(playScreen, animated: true, completion: {
+		sender.present(playScreen, animated: true, completion: {
 			
 			playScreen.playMusic()
 			
@@ -69,11 +104,21 @@ class AudioManager {
 	}
 	
 	
-	// PUBLIC METHODS
+	
+	//==========================
+	// MARK: public methods
+	//==========================
+	
+	
 	
 	func popupPlayer(senderVC: UIViewController, newSong: Song) {
+		
+		// note that we're setting the public get/set properties here, and not the private class variables
+		// that's because this method is publicly callable and they can pass anything in
 		sender = senderVC
 		song = newSong
+		
+		// we then call our own private class method, which accesses only private class variables
 		_popupPlayer()
 	}
 	
