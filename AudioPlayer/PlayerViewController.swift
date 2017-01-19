@@ -12,39 +12,52 @@ import Foundation
 // stop button WILL DISSMISS AND PUASE WILL JUST PAUSE
 class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
     
-    
-    // REFERENCE TO THE PROGRESS BAR
-    // "HOW ELSE ARE WE SUPPOSE TO TALK ABOUT IT"
-    @IBOutlet weak var progressSongBar: UIProgressView!
-	
-	
-	
-	// data
-	var songTitle: String = ""
-	var songArtist: String = ""
-	var filePath: URL = URL(fileURLWithPath: "")
-	
-	
-	// misc player info
-	var trackTime: TimeInterval = 0
-	
-	
-    // RFERENCE TO LABELS
+
+	    // RFERENCE TO LABELS
     // "HOW ARE WE SUPPOSE TO TALK ABOUT THEM ON THIS SHEET"
     @IBOutlet weak var labelForArtist: UILabel!
     @IBOutlet weak var labelForTitle: UILabel!
 	
-    
-    var player : AVAudioPlayer!
 	
+	
+	// RFERENCE TO PROGRESS BAR
+	// "HOW ARE WE SUPPOSE TO TALK ABOUT IT ON THIS SHEET"
+	@IBOutlet weak var progressSongBar: UIProgressView!
+	
+	
+	
+	// data
+	var songTitle: String!
+	var songArtist: String!
+	var filePath: URL!
+	
+	
+	
+	// audio player
+	var player : AVAudioPlayer!
+	
+	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		player = AVAudioPlayer()
+		
+		if filePath == nil {
+			filePath = URL(fileURLWithPath: "")
+		}
+		if songTitle == nil {
+			songTitle = ""
+		}
+		if songArtist == nil {
+			songTitle = ""
+		}
+		
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
+	
+	
 
 	func displaySongInfo() {
 		
@@ -53,15 +66,12 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		
 	}
 	
+	
 	func playMusic() {
 		
 		do {
 			player = try! AVAudioPlayer(contentsOf: filePath)
 			player.delegate = self
-			if (trackTime > 1) {
-				player.play(atTime: trackTime)
-				return
-			}
 			player.prepareToPlay()
 			player.play()
 		}
@@ -71,21 +81,24 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		
 	}
 	
+	
 	func stopMusic() {
 		
 		player.stop()
 	}
 	
-	func pauseMusic() {
+
+	func pauseOrRestart() {
 		
 		if player.isPlaying {
-			print(player.currentTime)
-			trackTime = player.currentTime
 			player.pause()
+		}
+		else {
+			player.play()
 		}
 		
 	}
-
+	
 	
 	func closePlayer() {
 		
@@ -95,10 +108,12 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	
 	
 	
+	
 	// MARK: actions
+	
     @IBAction func playButton(_ sender: UIButton) {
 		
-		playMusic()
+		pauseOrRestart()
 		
     }
     
@@ -113,7 +128,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
     
     @IBAction func pauseButton(_ sender: UIButton) {
 		
-		pauseMusic()
+		pauseOrRestart()
 
     }
     
