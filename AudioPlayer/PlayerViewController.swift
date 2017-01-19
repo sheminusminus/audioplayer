@@ -40,13 +40,17 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		player = AVAudioPlayer()
-		
-		// Do any additional setup after loading the view.
 	}
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	}
+
+	func displaySongInfo() {
+		
+		labelForTitle.text = songTitle
+		labelForArtist.text = songArtist
+		
 	}
 	
 	func playMusic() {
@@ -54,8 +58,12 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		do {
 			player = try! AVAudioPlayer(contentsOf: filePath)
 			player.delegate = self
+			if (trackTime > 1) {
+				player.play(atTime: trackTime)
+				return
+			}
 			player.prepareToPlay()
-			player.play(atTime: trackTime)
+			player.play()
 		}
 		catch {
 			print("error playing song file")
@@ -65,28 +73,19 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	
 	func stopMusic() {
 		
-		if player.isPlaying {
-			trackTime = 0
-		}
 		player.stop()
 	}
 	
 	func pauseMusic() {
 		
 		if player.isPlaying {
+			print(player.currentTime)
 			trackTime = player.currentTime
 			player.pause()
 		}
 		
 	}
-	
-	
-	func displaySongInfo() {
-		
-		labelForTitle.text = songTitle
-		labelForArtist.text = songArtist
-		
-	}
+
 	
 	func closePlayer() {
 		

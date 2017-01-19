@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		02565CF51E28476E004F10A5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02565CF41E28476E004F10A5 /* PlayerViewController.swift */; };
-		4C0E83641E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */; };
 		4C0E83671E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83661E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 */; };
 		4C0E83691E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83681E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a */; };
 		4C0E836B1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E836A1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a */; };
@@ -30,6 +29,8 @@
 		4C0E838B1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */; };
 		4C0E838D1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */; };
 		4C597F601E300A1C0014AF96 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C597F5F1E300A1C0014AF96 /* AudioManager.swift */; };
+		4C597F611E3039B70014AF96 /* ArcadeFire-WeUsedToWait.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */; };
+		4C597F631E3039F70014AF96 /* Edit-Ants.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C597F621E3039F70014AF96 /* Edit-Ants.m4a */; };
 		4C70D3931E0482B000683F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3921E0482B000683F4F /* AppDelegate.swift */; };
 		4C70D3951E0482B000683F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C70D3941E0482B000683F4F /* ViewController.swift */; };
 		4C70D3981E0482B000683F4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C70D3961E0482B000683F4F /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 		4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalkTheMoon-AnnaSun.m4a"; sourceTree = "<group>"; };
 		4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YeahYeahYeahs-Phenomena.m4a"; sourceTree = "<group>"; };
 		4C597F5F1E300A1C0014AF96 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		4C597F621E3039F70014AF96 /* Edit-Ants.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Edit-Ants.m4a"; sourceTree = "<group>"; };
 		4C70D38F1E0482B000683F4F /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C70D3921E0482B000683F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C70D3941E0482B000683F4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */,
 				4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */,
+				4C597F621E3039F70014AF96 /* Edit-Ants.m4a */,
 				4C0E83801E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a */,
 				4C0E83861E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a */,
 				4C0E83821E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a */,
@@ -326,7 +329,7 @@
 				TargetAttributes = {
 					4C70D38E1E0482B000683F4F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8GE53Y8KX2;
+						DevelopmentTeam = B9452FEMTF;
 						ProvisioningStyle = Automatic;
 					};
 					4C70D3A51E0482B100683F4F = {
@@ -368,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C597F611E3039B70014AF96 /* ArcadeFire-WeUsedToWait.m4a in Resources */,
 				4C0E83771E283C430082DFD3 /* JeffersonAirplane-WhiteRabbit.m4a in Resources */,
 				4C0E837F1E283C6D0082DFD3 /* OfMonstersAndMen-LittleTalks.m4a in Resources */,
 				4C0E83831E283C8A0082DFD3 /* RyanLevine-ThroughTheTrees.m4a in Resources */,
@@ -375,6 +379,7 @@
 				4C0E83671E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 in Resources */,
 				4C0E836B1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a in Resources */,
 				4C0E838B1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a in Resources */,
+				4C597F631E3039F70014AF96 /* Edit-Ants.m4a in Resources */,
 				4C0E838D1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a in Resources */,
 				4C0E83751E283C370082DFD3 /* ImagineDragons-Radioactive.m4a in Resources */,
 				4C0E83891E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a in Resources */,
@@ -388,7 +393,6 @@
 				4C70D39D1E0482B000683F4F /* Assets.xcassets in Resources */,
 				4C0E83811E283C800082DFD3 /* Pendulum-PropaneNightmares.m4a in Resources */,
 				4C70D3981E0482B000683F4F /* Main.storyboard in Resources */,
-				4C0E83641E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a in Resources */,
 				4C0E83791E283C4F0082DFD3 /* LedZeppelin-DazedAndConfused.m4a in Resources */,
 				4C0E83871E283C9A0082DFD3 /* TakingBackSunday-YouAreSoLastSummer.m4a in Resources */,
 				4C0E836D1E283C130082DFD3 /* EmpireOfTheSun-WalkingOnADream.m4a in Resources */,
@@ -579,7 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8GE53Y8KX2;
+				DEVELOPMENT_TEAM = B9452FEMTF;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilykolar.AudioPlayer;
@@ -592,7 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8GE53Y8KX2;
+				DEVELOPMENT_TEAM = B9452FEMTF;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilykolar.AudioPlayer;
