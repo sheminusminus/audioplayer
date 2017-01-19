@@ -70,13 +70,13 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	func playMusic() {
 		
 		do {
-			player = try! AVAudioPlayer(contentsOf: filePath)
+			player = try AVAudioPlayer(contentsOf: filePath)
 			player.delegate = self
 			player.prepareToPlay()
 			player.play()
 		}
-		catch {
-			print("error playing song file")
+		catch let error {
+			print(error.localizedDescription)
 		}
 		
 	}
