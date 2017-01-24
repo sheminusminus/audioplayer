@@ -29,26 +29,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // THIS VAR WILL NOW WALK AROUND BEING THE TYOE AVAUDIPLAYER
     // why cant we say var player = avauidoplayer!
     var player: AVAudioPlayer!
-	
-    
-    
-	
-	// a variable to hold the library of songs
-    // whats with the type here???
-    // library is now gonna walk around a represent a letter with multiple songs from the letter
-	var library: [String: [Song]] = [String:[Song]]()
-	// library = ["A": ["A song 1", "A song 2"], "B": ["B song 1", "B song 2"]]
-	
-    
-    
-    
-    
-	// a constant to hold titles of various library sections; labels each section with letter
-    // section headers is a constant that is of type string of arraays?? holds the section letters
-	let sectionHeaders: [String] = ["#", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-	
-    
     
     
 
@@ -57,7 +37,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
         //
-		buildSongLibrary()
 	}
     
     
@@ -66,79 +45,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // WHEN THE View LOADS!!!!!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
-        // these constants are gonna walk around this sheet and represent the song objects that include the Title,Type,Artist etc.............
-		let arcadeFire = Song(initTitle: "We Used to Wait", initArtist: "Arcade Fire", initType: "Rock", initFile: URL(fileReferenceLiteralResourceName: "ArcadeFire-WeUsedToWait.m4a"))
-		let brandNew = Song(initTitle: "Nobody Moves", initArtist: "Brand New", initType: "Rock", initFile: URL(fileReferenceLiteralResourceName: "BrandNew-NobodyMoves.mp3"))
-		let coconutRecords = Song(initTitle: "West Coast", initArtist: "Coconut Records", initType: "Pop Rock", initFile: URL(fileReferenceLiteralResourceName: "CoconutRecords-WestCoast.m4a"))
-        
 		
-        
-        
-		// gonna loop through the sectionHeaders and Letter is just an index essentially ????? you just made it there right ??
-		for letter in sectionHeaders {
-            
-            
-            // WHATS HAPPENING HERE ????
-			library[letter] = [Song]()
-            
-            
-            
-            // START OF THE IF .... GET THE BALL ROLLING
-            // IF LETTET WHICH WE MADE AT THE START OF THE LOOP IS EQUAL TO "A" THEN DO THIS??????
-			if letter == "A" {
-                
-                // // ADD arcadeFire TO THE LIBRARY LETTER "A"
-                // WHAT IS THE [Letter]? DOING HERE ...?????
-				library[letter]?.append(arcadeFire)
-            }
-                
-                // IF LETTER IS "B" DO THIS ....
-			else if letter == "B" {
-                
-                // ADD brandNew TO LIBRARY LETTER "B"
-				library[letter]?.append(brandNew)
-			}
-                
-                // IF LETTER IS EQUAL TO "C" DO THIS ....
-			else if letter == "C" {
-                
-                // ADD coconutRecords TO LIBRARY LETTER "C"
-				library[letter]?.append(coconutRecords)
-			}
-                
-                // IF NONE OF THOSE ABOVE DO THIS ...
-			else {
-                
-                //ADD brandNew TO THE REST OF THE LETTERS for now
-				library[letter]?.append(brandNew)
-			}
-            
-		}
-        // END OF LOOP??? *****************
 		
-        
-		print(library)
-        
         // I HATE SELF...... NO CLUE
 		tableView.delegate = self
 		tableView.dataSource = self
     }
+	
+	
+	
     // LIFECYCLE
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 	
-    
-    
-    
-    
-    
-    
+	
     
                                         // ** PROTOCOL METHODS OF UITableViewDataSource **
     
@@ -147,8 +68,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // THIS HAS TO DO WITH PRESSING THE SONG AND GOING TO THE PLAYSCREEN AND PLAYING THE PLAYING THE SONG
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let selectedSection = sectionHeaders[indexPath.section]
-        let selectedSong = library[selectedSection]?[indexPath.row]
+        let selectedSection = LibraryManager.mgr.sectionHeaders[indexPath.section]
+        let selectedSong = LibraryManager.mgr.library[selectedSection]?[indexPath.row]
 		
 		
 		popupPlayer(song: selectedSong!)
@@ -165,7 +86,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // where does it return it in the simulator??
 	func numberOfSections(in tableView: UITableView) -> Int {
         // JUST COUNTS sectionsHeaders
-		return sectionHeaders.count
+		return LibraryManager.mgr.sectionHeaders.count
 	}
 	
     
@@ -177,7 +98,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // THIS FUNCTION RETURNS THE TITLE OF THE HEADER????
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return sectionHeaders[section]
+		return LibraryManager.mgr.sectionHeaders[section]
 	}
 	
     
@@ -222,8 +143,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		
 		// NOTE: we'll use these variables to help define the tablecell's content, but they won't work yet:
 		
-		let sectionHeader = sectionHeaders[indexPath.section]
-		let sectionSongs = library[sectionHeader]
+		let sectionHeader = LibraryManager.mgr.sectionHeaders[indexPath.section]
+		let sectionSongs = LibraryManager.mgr.library[sectionHeader]
 		let currentSong = sectionSongs?[indexPath.row]
 		let songLabel = UILabel(frame: CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.width, height: cell.frame.height))
         
@@ -255,46 +176,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 	// this creates the tiny alphabetized list on the right side of screen
 	func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-		return sectionHeaders
+		return LibraryManager.mgr.sectionHeaders
 	}
     
     
     
-    
-    
-    
-    
-    
-	
-	// MARK: functions, actions
-    // DIFFERENT FROM THE PROTOCOL METHODS ABOVE??
-    // ITS ACUALLY GONNA BUILD THE THING WE SEE WHEN WE RUN OUR SIMULATOR?????????????????????
-	func buildSongLibrary() {
-        
-		// get all our song types
-		// plan for other common types here soon (.wav, maybe .flac, etc)
-		var allPaths = Bundle.main.paths(forResourcesOfType: ".m4a", inDirectory: "")
-		let mp3Paths = Bundle.main.paths(forResourcesOfType: ".mp3", inDirectory: "")
-		
-		allPaths.append(contentsOf: mp3Paths);
-        
-		
-        // LOOP
-        // WHY IS THERE PATH HERE TO?????
-        // YOU CAN HAVE A LOOP WITH ALL LETS/VARS???? OR IS THIS FOR OUR OWN SAKE TO MAKE SURE ITS WORKING?? CUS OF THE print()
-        //
-//		for path in allPaths {
-//			let pathComponents = path.characters.split(separator: "-")
-//			print(pathComponents)
-//            
-//			let nameComponent = pathComponents.last
-//			
-//			let remainingComponents = pathComponents[pathComponents.count - 2].split(separator: "/")
-//			let artistComponent = remainingComponents[remainingComponents.count - 1]
-//			print(artistComponent)
-//		}
-	}
-	
+
 	
 	
 	
@@ -303,16 +190,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		AudioManager.mgr.popupPlayer(senderVC: self, newSong: song)
 	}
 	
-	
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

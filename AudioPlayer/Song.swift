@@ -16,6 +16,7 @@ class Song {
 	var mediaType: String!
 	var fileName: URL!
 	var genre: String!
+	var artwork: Data?
 	
     // right here we are activating them making them real .... so everytime we object song appers this all will come with
 	init(initTitle: String, initArtist: String, initType: String, initFile: URL, initGenre: String! = "") {
@@ -26,6 +27,15 @@ class Song {
 		self.mediaType = initType
 		self.fileName = initFile
 		self.genre = initGenre
+	}
+	
+	var artworkImage: Data {
+		get {
+			return artwork!
+		}
+		set(newValue) {
+			artwork = newValue
+		}
 	}
 	
 }

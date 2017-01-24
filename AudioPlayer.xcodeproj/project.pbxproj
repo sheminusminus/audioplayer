@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02565CF51E28476E004F10A5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02565CF41E28476E004F10A5 /* PlayerViewController.swift */; };
+		4C0304C61E33FEFE0063BAFB /* LibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0304C51E33FEFE0063BAFB /* LibraryManager.swift */; };
 		4C0E83671E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83661E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 */; };
 		4C0E83691E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83681E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a */; };
 		4C0E836B1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E836A1E283C040082DFD3 /* CoconutRecords-WestCoast.m4a */; };
@@ -28,6 +29,7 @@
 		4C0E83891E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */; };
 		4C0E838B1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */; };
 		4C0E838D1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */; };
+		4C1605B81E37F14D004389FD /* musicnote.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1605B71E37F14D004389FD /* musicnote.png */; };
 		4C597F601E300A1C0014AF96 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C597F5F1E300A1C0014AF96 /* AudioManager.swift */; };
 		4C597F611E3039B70014AF96 /* ArcadeFire-WeUsedToWait.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */; };
 		4C597F631E3039F70014AF96 /* Edit-Ants.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4C597F621E3039F70014AF96 /* Edit-Ants.m4a */; };
@@ -67,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		02565CF41E28476E004F10A5 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		4C0304C51E33FEFE0063BAFB /* LibraryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryManager.swift; sourceTree = "<group>"; };
 		4C0E83631E283B740082DFD3 /* ArcadeFire-WeUsedToWait.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArcadeFire-WeUsedToWait.m4a"; sourceTree = "<group>"; };
 		4C0E83661E283BBD0082DFD3 /* BrandNew-NobodyMoves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "BrandNew-NobodyMoves.mp3"; sourceTree = "<group>"; };
 		4C0E83681E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DeathCabForCutie-TitleAndRegistration.m4a"; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		4C0E83881E283CB40082DFD3 /* VitaminStringQuartet-HeySoulSister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VitaminStringQuartet-HeySoulSister.m4a"; sourceTree = "<group>"; };
 		4C0E838A1E283CBD0082DFD3 /* WalkTheMoon-AnnaSun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalkTheMoon-AnnaSun.m4a"; sourceTree = "<group>"; };
 		4C0E838C1E283CC60082DFD3 /* YeahYeahYeahs-Phenomena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YeahYeahYeahs-Phenomena.m4a"; sourceTree = "<group>"; };
+		4C1605B71E37F14D004389FD /* musicnote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicnote.png; sourceTree = "<group>"; };
 		4C597F5F1E300A1C0014AF96 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		4C597F621E3039F70014AF96 /* Edit-Ants.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Edit-Ants.m4a"; sourceTree = "<group>"; };
 		4C70D38F1E0482B000683F4F /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				4C597F5F1E300A1C0014AF96 /* AudioManager.swift */,
+				4C0304C51E33FEFE0063BAFB /* LibraryManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 		4C70D3911E0482B000683F4F /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				4C1605B71E37F14D004389FD /* musicnote.png */,
 				4C597F5E1E3009F10014AF96 /* Managers */,
 				4C0E83651E283B780082DFD3 /* Music */,
 				4C70D3D11E048E8600683F4F /* Views */,
@@ -388,6 +394,7 @@
 				4C70D3A01E0482B000683F4F /* LaunchScreen.storyboard in Resources */,
 				4C0E83691E283BEB0082DFD3 /* DeathCabForCutie-TitleAndRegistration.m4a in Resources */,
 				4C0E837D1E283C640082DFD3 /* NineInchNails-Ruiner.m4a in Resources */,
+				4C1605B81E37F14D004389FD /* musicnote.png in Resources */,
 				4C0E83731E283C2F0082DFD3 /* HuskyRescue-NewLightOfTomorrow.m4a in Resources */,
 				4C0E83711E283C260082DFD3 /* GeorgeBarnett-AnimalKeeper.m4a in Resources */,
 				4C70D39D1E0482B000683F4F /* Assets.xcassets in Resources */,
@@ -420,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0304C61E33FEFE0063BAFB /* LibraryManager.swift in Sources */,
 				4C70D3CE1E048E0900683F4F /* Song.swift in Sources */,
 				4C70D3D31E048EA500683F4F /* SearchBarView.swift in Sources */,
 				4C70D3D51E04963700683F4F /* ActivityItemView.swift in Sources */,
