@@ -2,8 +2,8 @@
 //  PlayerViewController.swift
 //  AudioPlayer
 //
-//  Created by Logan Caracci on 1/12/17.
-//  Copyright © 2017 Emily Kolar. All rights reserved.
+//  Created by Emily Kolar, Alex Flores on 1/12/17.
+//  Copyright © 2017 Emily Kolar, Alex Flores. All rights reserved.
 //
 
 import UIKit

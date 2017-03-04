@@ -2,8 +2,8 @@
 //  ActivityItem.swift
 //  AudioPlayer
 //
-//  Created by Emily Kolar on 12/16/16.
-//  Copyright © 2016 Emily Kolar. All rights reserved.
+//  Created by Emily Kolar, Alex Flores on 12/16/16.
+//  Copyright © 2016 Emily Kolar, Alex Flores. All rights reserved.
 //
 
 import Foundation

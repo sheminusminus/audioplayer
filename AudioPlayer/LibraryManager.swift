@@ -2,8 +2,8 @@
 //  LibraryManager.swift
 //  AudioPlayer
 //
-//  Created by Logan Caracci on 1/21/17.
-//  Copyright © 2017 Emily Kolar. All rights reserved.
+//  Created by Emily Kolar, Alex Flores on 1/21/17.
+//  Copyright © 2017 Emily Kolar, Alex Flores. All rights reserved.
 //
 
 import Foundation
