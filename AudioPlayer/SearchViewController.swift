@@ -14,8 +14,7 @@ import AVFoundation
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate {
 	
     
-                                                    // WHY ARE THERE 4 DIFFERENT "tableView" functions with the protocol methods?????
-    
+
     
 	
     // reference to UI OBJECT
@@ -29,37 +28,39 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // THIS VAR WILL NOW WALK AROUND BEING THE TYOE AVAUDIPLAYER
     // why cant we say var player = avauidoplayer!
     var player: AVAudioPlayer!
+	
+  
     
     
-
+    
+    
+    
 	// LIFECYCLE FUNCTIONS
     // RIGHT BEFORE THE VIEW COMES ON SCREEN HAVE THIS READY??
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-        //
+        
+		//buildSongLibrary()
 	}
-    
-    
-    
 	// LIFECYCLE FUNCTIONS
     // WHEN THE View LOADS!!!!!
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		
-        // I HATE SELF...... NO CLUE
+          // I HATE SELF...... NO CLUE
 		tableView.delegate = self
 		tableView.dataSource = self
     }
-	
-	
-	
     // LIFECYCLE
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 	
-	
+    
+    
+    
+    
+    
+    
     
                                         // ** PROTOCOL METHODS OF UITableViewDataSource **
     
@@ -72,6 +73,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let selectedSong = LibraryManager.mgr.library[selectedSection]?[indexPath.row]
 		
 		
+        // this functions is ready to happen when the
 		popupPlayer(song: selectedSong!)
 		
 
@@ -144,7 +146,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		// NOTE: we'll use these variables to help define the tablecell's content, but they won't work yet:
 		
 		let sectionHeader = LibraryManager.mgr.sectionHeaders[indexPath.section]
-		let sectionSongs = LibraryManager.mgr.library[sectionHeader]
+        let sectionSongs = LibraryManager.mgr.library[sectionHeader]
 		let currentSong = sectionSongs?[indexPath.row]
 		let songLabel = UILabel(frame: CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.width, height: cell.frame.height))
         
@@ -181,15 +183,22 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
-
-	
-	
 	
 	func popupPlayer(song: Song) {
 
 		AudioManager.mgr.popupPlayer(senderVC: self, newSong: song)
 	}
 	
+	
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

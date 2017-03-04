@@ -16,10 +16,10 @@ class Song {
 	var mediaType: String!
 	var fileName: URL!
 	var genre: String!
-	var artwork: Data?
+    var artwork: Data?
 	
     // right here we are activating them making them real .... so everytime we object song appers this all will come with
-	init(initTitle: String, initArtist: String, initType: String, initFile: URL, initGenre: String! = "") {
+	init(initTitle: String, initArtist: String, initType: String, initFile: URL? = URL(string: "musicnote.png")!, initGenre: String! = "") {
         
         //Damn self
 		self.title = initTitle
@@ -27,15 +27,21 @@ class Song {
 		self.mediaType = initType
 		self.fileName = initFile
 		self.genre = initGenre
-	}
-	
-	var artworkImage: Data {
-		get {
-			return artwork!
+		do {
+			self.artwork = try Data(contentsOf: initFile!)
 		}
-		set(newValue) {
-			artwork = newValue
+		catch let error {
+			print(error.localizedDescription)
 		}
 	}
 	
+    
+    var artworkImage: Data {
+        get{
+            return artwork!
+        }
+        set(newValue) {
+            artwork = newValue
+        }
+    }
 }

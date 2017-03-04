@@ -9,7 +9,8 @@
 import UIKit
 import AVFoundation
 import Foundation
-// stop button WILL DISSMISS AND PUASE WILL JUST PAUSE
+
+
 class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
     
 
@@ -41,6 +42,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+        //
 		if filePath == nil {
 			filePath = URL(fileURLWithPath: "")
 		}
