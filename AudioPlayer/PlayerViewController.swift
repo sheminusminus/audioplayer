@@ -32,12 +32,12 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 	var songArtist: String!
 	var filePath: URL!
 	
-	
+	var timer: Timer!
 	
 	// audio player
 	var player : AVAudioPlayer!
 	
-	
+	var secondsElapsed: TimeInterval = 0
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -77,6 +77,8 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 			player.delegate = self
 			player.prepareToPlay()
 			player.play()
+			secondsElapsed = round(player.currentTime)
+			timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateProgress), userInfo: nil, repeats: true)
 		}
 		catch let error {
 			print(error.localizedDescription)
@@ -84,14 +86,21 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		
 	}
 	
-	func songCompletion() {
-		
+	func updateProgress() {
+		print("TIMER: \(secondsElapsed)")
+		secondsElapsed = secondsElapsed + 1
+		let totalTime = player.duration
+		let mappedValue = secondsElapsed / totalTime
+		self.progressSongBar.progress = Float(mappedValue)
+		if secondsElapsed >= totalTime {
+			timer.invalidate()
+		}
 	}
-	
 	
 	func stopMusic() {
 		
 		player.stop()
+		timer.invalidate()
 	}
 	
 
@@ -99,6 +108,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		
 		if player.isPlaying {
 			player.pause()
+			timer.invalidate()
 		}
 		else {
 			player.play()

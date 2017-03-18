@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class AudioManager {
 	
@@ -31,8 +32,10 @@ class AudioManager {
 	private var _song: Song!
 	private var _sender: UIViewController!
 	
+	private var progressTimer: Timer!
 	
-	
+	private var progressBar: UIProgressView!
+	private var trackDuration: TimeInterval!
 	
 	// private init for this singleton object
 	private init() {
@@ -83,7 +86,6 @@ class AudioManager {
 	//==========================
 	
 	
-	
 	private func _popupPlayer() {
 		
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -97,14 +99,18 @@ class AudioManager {
 		sender.present(playScreen, animated: true, completion: {
 			
 			playScreen.playMusic()
-			_ = Timer(fire: Date(), interval: 1, repeats: true, block: {
-				(timer) in
-				let current = Int(playScreen.player.currentTime)
-				let total = Int(playScreen.player.duration)
-				let progress = (current * 100) / total
-				print(progress)
-				playScreen.progressSongBar.progress = Float(progress)
-			})
+			//self.trackDuration = playScreen.player.duration
+			//self.progressBar = playScreen.progressSongBar
+
+			
+//			self.progressTimer = Timer(fire: Date(), interval: 1, repeats: true, block: {
+//				(timer) in
+//				let current = Int(playScreen.player.currentTime)
+//				let total = Int(playScreen.player.duration)
+//				let progress = (current * 100) / total
+//				print(progress)
+//				playScreen.progressSongBar.progress = Float(progress)
+//			})
 			
 		})
 		
@@ -116,7 +122,10 @@ class AudioManager {
 	// MARK: public methods
 	//==========================
 	
-	
+	@objc func progressTimerCallback(t: Timer) {
+		//print(t.userInfo!)
+		
+	}
 	
 	func popupPlayer(senderVC: UIViewController, newSong: Song) {
 		
