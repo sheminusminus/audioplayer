@@ -94,10 +94,17 @@ class AudioManager {
 		playScreen.songTitle = _song.title
 		playScreen.songArtist = _song.artist
 		
-		
 		sender.present(playScreen, animated: true, completion: {
 			
 			playScreen.playMusic()
+			_ = Timer(fire: Date(), interval: 1, repeats: true, block: {
+				(timer) in
+				let current = Int(playScreen.player.currentTime)
+				let total = Int(playScreen.player.duration)
+				let progress = (current * 100) / total
+				print(progress)
+				playScreen.progressSongBar.progress = Float(progress)
+			})
 			
 		})
 		
