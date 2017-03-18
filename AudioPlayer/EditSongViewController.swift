@@ -10,11 +10,14 @@ import UIKit
 
 
 /// so like if i wanted to use the audioManager for 
-class EditSongViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class EditSongViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIScrollViewDelegate {
 
 	@IBOutlet weak var titleField: UITextField!
 	@IBOutlet weak var artistField: UITextField!
 	@IBOutlet weak var artworkView: UIImageView!
+	
+	@IBOutlet weak var scrollView: UIScrollView!
+	
 	
 	// walking around now representing these powers and stuff
 	let imagePicker = UIImagePickerController()
@@ -58,7 +61,7 @@ class EditSongViewController: UIViewController, UIImagePickerControllerDelegate,
 	}
 	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
-	
+		scrollView.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
 	}
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -73,6 +76,7 @@ class EditSongViewController: UIViewController, UIImagePickerControllerDelegate,
 		else if textField == artistField {
 			actions.append(HistoryAction.artist)
 		}
+		scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
 	}
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

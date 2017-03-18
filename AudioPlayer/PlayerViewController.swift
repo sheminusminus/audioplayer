@@ -53,6 +53,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 			songTitle = ""
 		}
 		
+		progressSongBar.progress = 0
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -80,6 +81,10 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate{
 		catch let error {
 			print(error.localizedDescription)
 		}
+		
+	}
+	
+	func songCompletion() {
 		
 	}
 	

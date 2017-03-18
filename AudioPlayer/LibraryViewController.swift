@@ -58,7 +58,7 @@ class LibraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     // creating the cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "libraryCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "libraryCell", for: indexPath) as! LibraryCell
         let currentSection = LibraryManager.mgr.sectionHeaders[indexPath.section]
         let currentSong = LibraryManager.mgr.library[currentSection]![indexPath.row]
         
@@ -67,29 +67,31 @@ class LibraryViewController: UIViewController, UICollectionViewDelegate, UIColle
         let titleText = currentSong.title
         let artistText = currentSong.artist
         
-
-        
         //spot for image0
         let artworkImage = UIImage(data: currentSong.artworkImage)
+		
+		cell.artistLabel.text = artistText
+		cell.titleLabel.text = titleText
+		cell.imageView.image = artworkImage
         
         // uiimage thru code
-        let artworkView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 1000))
-        artworkView.backgroundColor = UIColor.cyan
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 100, width: cell.frame.width, height: 20))
-        let artistLabel = UILabel(frame: CGRect(x: 0, y: 100, width: cell.frame.width, height: 20))
+//        let artworkView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 1000))
+//        artworkView.backgroundColor = UIColor.cyan
+//        let titleLabel = UILabel(frame: CGRect(x: 0, y: 100, width: cell.frame.width, height: 20))
+//        let artistLabel = UILabel(frame: CGRect(x: 0, y: 100, width: cell.frame.width, height: 20))
+		
         
         
+//        titleLabel.text = titleText
+//        artistLabel.text = artistText
+//        artworkView.image = artworkImage
+		
+        cell.clipsToBounds = true
         
-        titleLabel.text = titleText
-        artistLabel.text = artistText
-        artworkView.image = artworkImage
-        
-        
-        
-        cell.addSubview(artworkView)
-        cell.addSubview(titleLabel)
-        cell.addSubview(artistLabel)
-        
+//        cell.addSubview(artworkView)
+//        cell.addSubview(titleLabel)
+//        cell.addSubview(artistLabel)
+		
         return cell
     }
     
@@ -132,18 +134,13 @@ class LibraryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     
-    
-        
-       
-   
-    
 }
 
 // layout options stack
 extension LibraryViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize = CGSize(width: 120, height: 150)
+        let cellSize = CGSize(width: self.view.frame.width / 2, height: 150)
         return cellSize
     }
     
